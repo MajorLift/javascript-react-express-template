@@ -1,0 +1,98 @@
+{	
+    "root": true,	
+    "env": {	
+      "node": true,	
+      "browser": true,
+      "jest": true	
+    },
+    "plugins": [	
+      "jest",	
+      "promise",	
+      "prettier"	
+    ],	
+    "extends": [	
+      "eslint:recommended",	
+      "airbnb",	
+      "airbnb/hooks",
+      "plugin:import/errors",	
+      "plugin:import/warnings",	
+      "plugin:import/typescript",	
+      "plugin:react/recommended",
+      "plugin:react-hooks/recommended",	
+      "plugin:jest/recommended",	
+      "plugin:promise/recommended",	
+      "plugin:unicorn/recommended",	
+      "plugin:prettier/recommended"
+    ],
+    "rules": {	
+        "prettier/prettier": "warn",	
+        /* Uncomment to globally disable individual linter rules */	
+        "arrow-body-style": "off", // conflicts with prettier	
+        "class-methods-use-this": "warn",	
+        "consistent-return": "warn",	
+        "curly": "warn",	
+        // "comma-dangle": "off",	
+        "default-case": "off",	
+        // "dot-notation": "off",	
+        "eqeqeq": "warn",	
+        // "func-names": "off",	
+        // "guard-for-in": "off",	
+        // "import/extensions": "off",	
+        "import/no-default-export": "error",	
+        "import/no-extraneous-dependencies": "off", // It's not accurate in the monorepo style	
+        // "import/no-unresolved": "off",	
+        "import/prefer-default-export": "off", // https://basarat.gitbooks.io/typescript/docs/tips/defaultIsBad.html	
+        // "max-len": "off",	
+        // "no-alert": "off",	
+        "no-console": "off",	
+        // "no-confusing-arrow": "off",	
+        "no-nested-ternary": "off",	
+        "no-param-reassign": "error", // enforces pure function signature	
+        "no-plusplus": "warn",	
+        "no-prototype-builtins": "off", // Too restrictive, writing ugly code to defend against a very unlikely scenario: https://eslint.org/docs/rules/no-prototype-builtins	
+        // "no-restricted-globals": "off",	
+        // "no-restricted-syntax": "off",	
+        // "no-shadow": "off",	
+        // "no-unexpected-multiline": "off",	
+        // "no-unused-vars": "off",	
+        // "no-useless-constructor": "off",	
+        "no-underscore-dangle": "off",	
+        // "no-unused-expressions": "off",	
+        "no-return-assign": "off",	
+        "no-throw-literal": "warn",	
+        "prefer-arrow-callback": "off", // conflicts with prettier	
+        // "prefer-destructuring": "off",	
+        "prefer-template": "warn",	
+        // "spaced-comment": "off"	
+
+        /* react, react-hooks linter rules */	
+        // "react/boolean-prop-naming": "off",	
+        // "react/button-has-type": "off",	
+        "react/destructuring-assignment": "off", // Too restrictive: https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/destructuring-assignment.md	
+        // "react/display-name": ["off"],	
+        "react/function-component-definition": "off",	
+        // "react/forbid-prop-types": "off",	
+        "react/jsx-boolean-value": "off",	
+        "react/jsx-filename-extension": "off", // No jsx extension: https://github.com/facebook/create-react-app/issues/87#issuecomment-234627904	
+        // "react/jsx-no-duplicate-props": "off",	
+        // "react/no-access-state-in-setstate": "off",	
+        // "react/no-array-index-key": "off",	
+        // "react/no-did-update-set-state": "off",	
+        "react/no-unused-prop-types": "warn",	
+        // "react/no-unused-state": "off",	
+        // "react/prefer-stateless-function": "off",	
+        "react/prop-types": "off",	
+        // "react/react-in-jsx-scope": "off"	
+        "react-hooks/rules-of-hooks": "error",	
+        "react-hooks/exhaustive-deps": "error",	
+
+        "unicorn/prevent-abbreviations": "off", // Common abbreviations are known and readable	
+        "unicorn/no-array-for-each": "off" // Airbnb prefers forEach
+    },
+    "settings": {
+        "react": {
+            "pragma": "React",
+            "version": "detect"
+        }
+    }
+}

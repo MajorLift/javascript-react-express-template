@@ -1,3 +1,8 @@
+dist/
+package-lock.json
+
+assets/
+
 # Logs
 logs
 *.log

@@ -1,0 +1,56 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+
+      # Runs a single command using the runners shell
+      - name: Run a one-line script
+        run: echo Hello, world!
+
+      # Runs a set of commands using the runners shell
+      - name: Run a multi-line script
+        run: |
+          echo Add other actions to build,
+          echo test, and deploy your project.
+      
+      - name: Github Action Merge Dependabot
+        # You may pin to the exact commit or the version.
+        # uses: fastify/github-action-merge-dependabot@17c6db1d88efa8dfd19fe28e86a8d37d1269bfdb
+        uses: fastify/github-action-merge-dependabot@v3.0.2
+        with:
+          # A GitHub token
+          github-token: b0ac29fe6d437ea9b9b34f5c784bc36c386b5671
+          # Packages that you want to manually review before upgrading
+#           exclude: # optional
+          # If true, the PR is only approved but not merged
+#           approve-only: # optional
+          # The merge method you would like to use (squash, merge, rebase)
+#           merge-method: # optional, default is squash
+          # An arbitrary message that you'd like to comment on the PR after it gets auto-merged
+#           merge-comment: # optional, default is 
+          # Auto-merge on major, minor, patch updates based on Semantic Versioning
+#           target: # optional, default is any
+          # A pull request number, only required if triggered from a workflow_dispatch event
+#           pr-number: # optional

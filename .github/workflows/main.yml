@@ -41,7 +41,7 @@ jobs:
         uses: fastify/github-action-merge-dependabot@v3.0.2
         with:
           # A GitHub token
-          github-token: b0ac29fe6d437ea9b9b34f5c784bc36c386b5671
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           # Packages that you want to manually review before upgrading
 #           exclude: # optional
           # If true, the PR is only approved but not merged

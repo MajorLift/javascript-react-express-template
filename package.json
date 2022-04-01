@@ -36,7 +36,7 @@
     "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-react": "^7.28.0",
     "eslint-plugin-react-hooks": "^4.3.0",
-    "eslint-plugin-unicorn": "^40.0.0",
+    "eslint-plugin-unicorn": "^42.0.0",
     "html-webpack-plugin": "^5.5.0",
     "jest": "^27.4.7",
     "jest-puppeteer": "^6.0.3",
